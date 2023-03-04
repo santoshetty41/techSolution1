@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0dcaf0;
+    --secondary-color: #3b4fe4;
+    --dark: #000;
+    --light: #fff;
+    --light-blur: #fffffff5;
+    --blur-light: rgba(255, 255, 255, 80%);
+    --text-color: #6e6e6e;
+
+}
+
+.title {
+    font-size: 3.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hr {
+    width: 5rem;
+    margin: auto;
+    color: var(--text-color);
+    height: 4rem;
+}
+
+.text-color {
+    color: var(--text-color);
+}
+
+/* ==================header======================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    transition: background 0.5s ease-in-out !important;
+}
+
+.navbar-scroll {
+    background: rgb(65, 65, 65);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+}
+
+/* .navbar-nav {
+    color: wheat
+} */
+
+.navbar-brand,
+.navbar-nav .nav-item .nav-link {
+    color: var(--blur-light);
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-weight: 400;
+}
+
+
+.nav-item {
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: background 0.5s !important;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 90%);
+    color: var(--text-color);
+}
+
+.nav-item:hover,
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--dark);
+}
+
+
+.active {
+    color: #0dcaf0;
+}
+
+.navbar-dark .navbar-nav,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(0 0 0 / 75%);
+}
+
+
+
+/* ==========================carousel========================= */
+.mobile {
+    display: none;
+}
+
+.laptop {
+    display: block;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.5);
+}
+
+.carousel-caption {
+    bottom: 5rem;
+}
+
+.carousel-caption h2 {
+    font-size: 3.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1.3rem;
+    color: var(--light-blur);
+
+}
+
+.btn {
+    border-radius: .7rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .8rem 3rem;
+}
+
+/* ==========================About US========================= */
+
+.about-right {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-left {
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.about-left img {
+    width: 20rem;
+}
+
+/* =================Our Team ========================== */
+
+.card-img-top {
+    border-radius: 50%;
+    height: 250px !important;
+    width: 250px !important;
+    position: relative;
+    left: 80px;
+    top: -80px;
+    object-fit: cover;
+}
+
+.profile {
+    border-radius: 0;
+    cursor: pointer;
+    margin-top: 100px !important;
+}
+
+.profile:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.profil-social-icon i:hover {
+    color: var(--secondary-color);
+}
+
+.card-body {
+    margin-top: -50px;
+}
+
+.bi {
+    font-size: 25px;
+}
+
+.see-more {
+    margin: auto;
+    display: table;
+}
+
+/* ======================Services====================== */
+.services {
+    background: url(/images/blob-grad.svg);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-position-x: 2rem;
+}
+
+.services .card {
+    max-width: 22rem;
+    margin-top: 3rem;
+    transition: all 0.3s;
+}
+
+.services .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.services .card .icon {
+    font-size: 4rem;
+    margin: 1rem 0 3rem;
+    /* padding: 1rem; */
+    text-align: center;
+}
+
+.services .card .icon i {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--light-blur);
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--secondary-color);
+
+}
+
+.service-card-content h5 {
+    margin: 1rem;
+}
+
+.service-card-content .more-btn {
+    padding: 0.5rem 2rem;
+}
+
+.service-card-content p {
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* ========================Our Work================= */
+
+.work-section {
+    margin-top: 8rem;
+}
+
+.works {
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    background: url(/images/bg-blob-gradient.svg);
+    background-position: center;
+}
+
+.work {
+    /* border: 4px solid rgb(255, 4, 4); */
+    position: relative;
+    padding: 0;
+    max-width: 21rem;
+    cursor: pointer;
+}
+
+.work img {
+    width: 100%;
+    /* border-radius: .5rem; */
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--primary-color));
+    bottom: 0;
+    left: 0rem;
+    overflow: hidden;
+    /* border-radius: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 0rem 1rem; */
+    font-size: 1.2rem;
+    transition: transform 0.5s, height 0.5s;
+    color: var(--light);
+}
+
+.layer h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.work:hover img {
+    transform: scale(1.04);
+}
+
+.work:hover .layer {
+    height: 100%;
+    transform: scale(1.05);
+}
+
+.map {
+    height: 20rem;
+    width: 100%;
+    border: none;
+    margin-top: 5rem;
+}
+
+/* ===============footer================== */
+.footer-section {
+    margin-top: -6px;
+}
+
+.footer-title h2 {
+    font-weight: 900;
+    font-size: 2.3rem;
+}
+
+.footer-list ul li {
+    list-style: none;
+}
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+    color: #d7d3d3;
+    cursor: pointer;
+}
+
+.footer-list ul li a:hover {
+    color: var(--primary-color);
+}
+
+.sub-footer-section {
+    background-color: #454444;
+    height: 2rem;
+    padding-top: .3rem;
+
+}
+
+.sub-footer-section p {
+    color: #ded9d9;
+    font-weight: 500;
+}
+
+/* <!-- -=====================Contact ===========================> --> */
+.contact-section {}
+
+
+
+/* =============Media Query============ */
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 80%;
+    }
+
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        background-color: rgb(65, 65, 65);
+    }
+
+    .navbar-margin {
+        margin: 1rem .6rem !important;
+    }
+
+    /* <!-- ================================Carousel========================== --> */
+
+    .mobile {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+
+    .carousel-caption {
+        bottom: 10rem;
+    }
+
+    .carousel-caption h2 {
+        font-size: 3.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+        color: var(--light-blur);
+
+    }
+
+    /* ==========================About US========================= */
+
+    .about-right p {
+        padding: 2rem;
+        text-align: justify;
+    }
+
+    .about-left img {
+        width: 50%;
+    }
+
+    /* ==========================Our Team========================= */
+    .profile {
+        width: 25rem;
+        margin: auto;
+    }
+
+    /* 
+    left: 48px !important; */
+
+    .card-img-top {
+        border-radius: 50%;
+        /* height: 220 !important; */
+        width: 150px !important;
+        height: 150px !important;
+        position: relative;
+        left: 70px;
+        top: -80px;
+        object-fit: cover;
+
+    }
+
+    /* =================Services================= */
+
+    .services .card {
+        width: 25rem;
+    }
+
+    /* =================Our Work================= */
+    .work {
+        width: 25rem;
+    }
+
+
+    /* ===========footer================== */
+    .map {
+        height: 10rem;
+    }
+
+    .footer-list ul {
+        width: 25rem;
+    }
+
+    .footer-list ul li {
+        margin-left: 1rem;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media screen and (width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
