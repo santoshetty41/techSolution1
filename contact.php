@@ -76,46 +76,38 @@
 
             <div class="row">
                 <div class="col-md-9 mb-md-0 mb-5 mx-auto">
-                    <form id="contact-form" name="contact-form" action="#" method="POST">
+                    <form id="contact-form" name="contact-form" action="send_email.php" method="POST">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="md-form mb-4">
-                                    <input type="text" id="name" name="name" class="form-control"
-                                        placeholder="Your name">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-4">
-                                    <input type="text" id="email" name="email" class="form-control"
-                                        placeholder="Your Email">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form mb-4">
-                                    <input type="text" id="subject" name="subject" class="form-control"
-                                        placeholder="Subject">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-
                                 <div class="md-form mb-4">
-                                    <textarea type="text" id="message" name="message" rows="5"
-                                        class="form-control md-textarea" placeholder="Enter Your Message"></textarea>
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
                                 </div>
-
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-4">
+                                    <textarea id="message" name="message" rows="5" class="form-control md-textarea"
+                                        placeholder="Enter Your Message" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="text-center text-md-left mt-3">
+                        <button type="submit" class="btn btn-primary">Send Email</button>
+                        </div>
                     </form>
-
-                    <div class="text-center text-md-left mt-3">
-                        <a class="btn btn-primary">Send</a>
-                    </div>
                 </div>
             </div>
         </div>

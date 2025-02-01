@@ -7,31 +7,41 @@ require 'vendor/autoload.php'; // Load PHPMailer
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = nl2br(htmlspecialchars($_POST['message']));
+
+    // Recipient Email
+    $receiverEmail = "receiver@example.com"; // Change this to your recipient email
 
     $mail = new PHPMailer(true);
 
     try {
         // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.example.com';
+        $mail->Host = 'smtp.gmail.com'; // Correct Gmail SMTP Host
         $mail->SMTPAuth = true;
-        $mail->Username = 'your_email@example.com'; // Your SMTP email
-        $mail->Password = 'your_email_password'; // Your email password
+        $mail->Username = 'your_email@gmail.com'; // Change this to your Gmail
+        $mail->Password = 'your_password'; // Use your App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587; // SMTP Port
+        $mail->Port = 587; // TLS uses port 587
 
         // Sender & Recipient
-        $mail->setFrom('your_email@example.com', 'Your Name');
-        $mail->addAddress($email, $name); // Sending email to the entered email
+        $mail->setFrom('your_email@gmail.com', 'Santosh SMTP');
+        $mail->addReplyTo($email, $name); // User's email as reply-to
+        $mail->addAddress($receiverEmail, "Receiver Name");
 
         // Email Content
         $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission';
-        $mail->Body = "<h3>Message from $name</h3><p>$message</p>";
+        $mail->Subject = $subject;
+        $mail->Body = "<h3>Message from: $name</h3>
+                       <p>Email: $email</p>
+                       <p><strong>Subject:</strong> $subject</p>
+                       <p>$message</p>";
 
         $mail->send();
-        echo "Email sent successfully!";
+        // Redirect to thank you page
+        header("Location: thank_you.php");
+        exit();
     } catch (Exception $e) {
         echo "Email sending failed: {$mail->ErrorInfo}";
     }
