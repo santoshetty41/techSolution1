@@ -32,29 +32,29 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.php">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="services.php" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="services.html">Digital Marketing</a></li>
-                            <li><a class="dropdown-item" href="services.html">Web Design</a></li>
-                            <li><a class="dropdown-item" href="services.html">Hosting and domain</a></li>
-                            <li><a class="dropdown-item" href="services.html">Mobile Application</a></li>
+                            <li><a class="dropdown-item" href="services.php">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="services.php">Web Design</a></li>
+                            <li><a class="dropdown-item" href="services.php">Hosting and domain</a></li>
+                            <li><a class="dropdown-item" href="services.php">Mobile Application</a></li>
 
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="work.html">Works</a>
+                        <a class="nav-link " href="work.php">Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                 </ul>
 
@@ -136,7 +136,7 @@
                         connectivity to end-point security, our solution ensure every aspect of your IT requirement is
                         taken care of.
                     </p>
-                    <a class="btn btn-primary mt-4" href="about.html" role="button">More<i
+                    <a class="btn btn-primary mt-4" href="about.php" role="button">More<i
                             class="fa-solid fa-arrow-right ps-3"></i></a>
                 </div>
             </div>
